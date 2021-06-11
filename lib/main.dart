@@ -5,7 +5,7 @@ import 'package:notificaciones/services/push_notifications_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await PushNotificationService.initializeApp();
+  await PushNotificatisonService.initializeApp();
   runApp(MyApp());
 }
 
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
 
     //Context!
-    PushNotificationService.messageStream.listen((message) {
+    PushNotificatisonService.messageStream.listen((message) {
       // print('MyApp: $message');
 
       navigatorKey.currentState?.pushNamed('message', arguments: message);
